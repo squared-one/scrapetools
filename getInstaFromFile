@@ -12,5 +12,5 @@
 FILE=$1
 while read LINE; do
      echo "URL: $LINE"
-     ./getInstaFromUrl $LINE
+     echo `./getInstaFromUrl $LINE`
 done < $FILE
