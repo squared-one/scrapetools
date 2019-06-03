@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# FIXME: -h option 
+usage() {
+    cat <<EOM
+Usage: $(basename $0) filepath
+EOM
+    # exit 0
+}
+usage
+
+FILE=$1
+while read LINE; do
+     echo "URL: $LINE"
+     ./getInstaFromUrl $LINE
+done < $FILE
