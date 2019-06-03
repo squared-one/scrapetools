@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # FIXME: -h option
-usage() {
-    cat <<EOM
-Usage: $(basename $0) url
-EOM
-    # exit 0
-}
-usage
+# usage() {
+#     cat <<EOM
+# Usage: $(basename $0) url
+# EOM
+#     # exit 0
+# }
+# usage
 
 curl $1 --silent | grep -Eo "(http|https)://www.instagram.com[a-zA-Z0-9./?=_-]*" | sort | uniq
